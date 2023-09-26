@@ -4,6 +4,6 @@ export default function handleResponseFromAPI(promise) {
 
   return promise
     .then(() => ({ status: 200, body: 'success' }))
-    .catch(() => (''))
+    .catch(() => new Error())
     .finally(() => log(text));
 }
