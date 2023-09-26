@@ -6,8 +6,9 @@ export default function handleResponseFromAPI(promise) {
   promise.then((response) => {
     log(text);
     return { status: 200, body: 'Success' };
+  // eslint-disable-next-line no-unused-vars
   }).catch((err) => {
     log(text);
-    return err;
+    return '';
   });
 }
