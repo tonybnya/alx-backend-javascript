@@ -29,7 +29,8 @@ export class StudentHolberton {
   }
 
   get fullStudentDescription() {
-    return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
+    return `${this._firstName} ${this._lastName} - \
+${this._holbertonClass.year} - ${this._holbertonClass.location}`;
   }
 }
 
@@ -47,8 +48,7 @@ const listOfStudents = [
   student2,
   student3,
   student4,
-  student5
+  student5,
 ];
-
 
 export default listOfStudents;
