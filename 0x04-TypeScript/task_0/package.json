@@ -6,7 +6,8 @@
   "scripts": {
     "start-dev": "webpack-dev-server --open",
     "build": "webpack",
-    "test": "jest"
+    "test": "jest",
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "",
