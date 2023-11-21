@@ -32,6 +32,8 @@ const countStudents = async (path) => {
   log(`${txt}: ${students.length}`);
   log(`${txt} in ${deptCS}: ${csStud.length}. List: ${csStud.join(', ')}`);
   log(`${txt} in ${deptSWE}: ${sweStud.length}. List: ${sweStud.join(', ')}`);
+
+  return { students, csStud, sweStud };
 };
 
 module.exports = countStudents;
