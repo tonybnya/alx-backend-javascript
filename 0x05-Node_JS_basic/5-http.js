@@ -6,8 +6,6 @@ const process = require('process');
 const hostname = '127.0.0.1';
 const port = 1245;
 
-const log = (arg) => console.log(arg);
-
 const app = http.createServer(async (req, res) => {
   const msg = 'Hello Holberton School!';
   const lst = 'This is the list of our students\n';
