@@ -23,10 +23,12 @@ const app = http.createServer(async (req, res) => {
       res.write(`${txt} in CS: ${data.csStud.length}. List: ${data.csStud.join(', ')}\n`);
       res.write(`${txt} in SWE: ${data.sweStud.length}. List: ${data.sweStud.join(', ')}`);
       res.end();
-    }).catch((error) => res.end(error.message));
+    }).catch((err) => res.end(err.message));
   }
 });
 
-app.listen(port, hostname);
+app.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
 
 module.exports = app;
