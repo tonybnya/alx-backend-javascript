@@ -18,7 +18,7 @@ const app = http.createServer(async (req, res) => {
   } else if (req.url === '/students') {
     res.write(lst);
 
-    const filePath = process.argv[2];
+    const filePath = process.argv.length > 2 ? process.argv[2] : '';
 
     countStudents(filePath).then((data) => {
       res.write(`${txt}: ${data.students.length}\n`);
