@@ -12,7 +12,6 @@ const countStudents = (path) => {
 
   const students = data.split('\n')
     .map((student) => student.split(','))
-    .filter((student) => student.length === 4 && student[0] !== 'firstname')
     .filter((student) => student.length === 4 && student[0] !== 'firstname');
 
   const CS = students
