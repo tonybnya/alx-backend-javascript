@@ -1,7 +1,10 @@
+const fs = require('fs');
 const log = (arg) => console.log(arg);
 
-const countStudents = () => {
-  log('Reading a file synchronously with Node JS');
+const countStudents = (path) => {
+  if (!fs.existsSync(path)) {
+    throw new Error('Cannot load the database');
+  }
 };
 
-imodule.exports = countStudents;
+module.exports = countStudents;
