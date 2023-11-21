@@ -1,7 +1,6 @@
 const students = require('./3-read_file_async');
 
 const http = require('http');
-const process = require('process');
 
 const hostname = '127.0.0.1';
 const port = 1245;
