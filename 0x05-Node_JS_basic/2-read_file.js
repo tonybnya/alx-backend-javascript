@@ -1,4 +1,9 @@
 const fs = require('fs');
+
+const txt = 'Number of students';
+const deptCS = 'CS';
+const deptSWE = 'SWE';
+
 const log = (arg) => console.log(arg);
 
 const countStudents = (path) => {
@@ -14,17 +19,17 @@ const countStudents = (path) => {
     .map((student) => student.split(','))
     .filter((student) => student.length === 4 && student[0] !== 'firstname');
 
-  const CS = students
-    .filter((student) => student[3] === 'CS')
+  const csStud = students
+    .filter((student) => student[3] === deptCS)
     .map((student) => student[0]);
 
-  const SWE = students
-    .filter((student) => student[3] === 'SWE')
+  const sweStud = students
+    .filter((student) => student[3] === deptSWE)
     .map((student) => student[0]);
 
-  log(`Number of students: ${students.length}`);
-  log(`Number of students in CS: ${CS.length}. List: ${CS.join(', ')}`);
-  log(`Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`);
+  log(`${txt}: ${students.length}`);
+  log(`${txt} in ${deptCS}: ${csStud.length}. List: ${csStud.join(', ')}`);
+  log(`${txt} in ${deptSWE}: ${sweStud.length}. List: ${sweStud.join(', ')}`);
 };
 
 module.exports = countStudents;
