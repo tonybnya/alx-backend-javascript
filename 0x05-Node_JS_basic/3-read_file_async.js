@@ -7,15 +7,14 @@ const deptSWE = 'SWE';
 const log = (arg) => console.log(arg);
 
 const countStudents = async (path) => {
-  // Process file reading asynchronously
+  // Processing file reading asynchronously
+  let data;
+
   try {
-    const data = await fs.promises.readFile(path, 'utf-8');
+    data = await fs.promises.readFile(path, 'utf-8');
   } catch (error) {
     throw new Error('Cannot load the database');
   }
-
-  // File reading process
-  const data = fs.readFileSync(path, 'utf-8');
 
   const students = data.split('\n')
     .map((student) => student.split(','))
