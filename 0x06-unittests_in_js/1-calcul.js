@@ -5,7 +5,7 @@ const calculateNumber = (type, a, b) => {
     case 'SUBTRACT':
       return Math.round(a) - Math.round(b);
     case 'DIVIDE':
-      return Math.round(b) === 0 ? 'Error' : Math.round(a) + Math.round(b);
+      return Math.round(b) === 0 ? 'Error' : Math.round(a) / Math.round(b);
     default:
       throw new Error(`Unexpected type of operation: ${type}`);
   }
