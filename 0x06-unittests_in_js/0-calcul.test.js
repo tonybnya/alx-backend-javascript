@@ -1,25 +1,3 @@
-// const assert = require('assert');
-// const calculateNumber = require('./0-calcul');
-//
-// const num = 4;
-//
-// describe('calculateNumber', () => {
-//   it(`Test ${num - 3}: 1.0 + 2.0 = 3`, () => {
-//     assert.strictEqual(calculateNumber(1.0, 2.0), 3);
-//   });
-//
-//   it(`Test ${num - 2}: 1 + 3.7 = 5`, () => {
-//     assert.strictEqual(calculateNumber(1, 3.7), 5);
-//   });
-//
-//   it(`Test ${num - 1}: 1.2 + 3.7 = 5`, () => {
-//     assert.strictEqual(calculateNumber(1.2, 3.7), 5);
-//   });
-//
-//   it(`Test ${num - 0}: 1.5 + 3.7 = 6`, () => {
-//     assert.strictEqual(calculateNumber(1.5, 3.7), 6);
-//   });
-// });
 const assert = require('assert');
 const calculateNumber = require('./0-calcul');
 
